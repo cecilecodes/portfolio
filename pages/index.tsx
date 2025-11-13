@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaGithub, FaLinkedinIn, FaYoutube } from 'react-icons/fa6';
 import AnimatedElement from '../components/animated-element';
 import Card from '../components/card';
@@ -68,12 +69,12 @@ export default function Home() {
               </AnimatedElement>
 
               <AnimatedElement as="p" delay={0.4} className="text-base font-['Edu_VIC_WA_NT_Hand']">
-                <a
+                <Link
                   href="/about-me"
                   className="text-neutral-800 hover:text-blue-600 dark:text-neutral-200 dark:hover:text-blue-400"
                 >
                   👉🏻 More About Me
-                </a>
+                </Link>
               </AnimatedElement>
             </div>
 
@@ -205,7 +206,7 @@ export default function Home() {
                   href="https://www.mheti.masimbi.com/"
                   className="text-neutral-600 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-blue-400"
                 >
-                  The Republic of Nambia's Ministry of Higher Education, Technology and Innovation
+                  The Republic of Nambia&apos;s Ministry of Higher Education, Technology and Innovation
                 </a>                <br />
                 <span className="text-neutral-800 dark:text-neutral-200">Grand Prize : 9th I-MUN-UPR</span> – <a
                   href="https://www.mofa.go.kr/www/index.do"
