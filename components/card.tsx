@@ -1,7 +1,9 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa6';
-import ServerIcon from './server-icon';
-import WindowIcon from './window-icon';
+import { FaYoutube } from 'react-icons/fa6';
+import { FaLinkedinIn } from 'react-icons/fa6';
+import { BiMedal } from "react-icons/bi";
+import { IoPersonCircleOutline, IoBusinessSharp } from "react-icons/io5";
 import EarthIcon from './earth-icon';
 
 type CardProps = {
@@ -9,8 +11,11 @@ type CardProps = {
   description?: string;
   linkProd?: string;
   linkRepo?: string;
-  backendStack?: string;
-  frontendStack?: string;
+  linkYou?: string;
+  linkLink?: string;
+  organization?: string;
+  award?: string;
+  position?: string;
   children?: React.ReactNode;
 };
 
@@ -19,11 +24,14 @@ const Card: React.FC<CardProps> = ({
   description = '',
   linkProd = '#',
   linkRepo = '#',
-  backendStack = '',
-  frontendStack = '',
+  linkYou = '#',
+  linkLink = '#',
+  organization = '',
+  award = '',
+  position = '',
 }) => {
   return (
-    <div className="flex h-auto flex-col gap-4 rounded-2xl border-2 border-neutral-200 p-8 transition-colors duration-200 hover:border-orange-500 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-orange-500">
+    <div className="flex h-auto flex-col gap-4 rounded-2xl border-2 border-neutral-200 p-8 transition-colors duration-200 hover:border-[#5B92E5] dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-[#5B92E5]">
       <div className="h-5/6 space-y-4">
         <div className="flex flex-row">
           <p className="font-['Schibsted_Grotesk'] text-lg font-semibold">{title}</p>
@@ -33,20 +41,31 @@ const Card: React.FC<CardProps> = ({
         </p>
       </div>
 
-      <div className="flex flex-row">
-        <ServerIcon />
-        <p className="pl-3 text-sm text-neutral-600 dark:text-neutral-300">{backendStack}</p>
-      </div>
+      {award && (
+        <div className="flex flex-row">
+          <BiMedal className="h-5 w-5" />
+          <p className="pl-3 text-sm text-neutral-600 dark:text-neutral-300">{award}</p>
+        </div>
+      )}
 
-      <div className="flex flex-row">
-        <WindowIcon />
-        <p className="pl-3 text-sm text-neutral-600 dark:text-neutral-300">{frontendStack}</p>
-      </div>
+      {organization && (
+        <div className="flex flex-row">
+          <IoBusinessSharp className="h-5 w-5" />
+          <p className="pl-3 text-sm text-neutral-600 dark:text-neutral-300">{organization}</p>
+        </div>
+      )}
+
+      {position && (
+        <div className="flex flex-row">
+          <IoPersonCircleOutline className="h-5 w-5" />
+          <p className="pl-3 text-sm text-neutral-600 dark:text-neutral-300">{position}</p>
+        </div>
+      )}
 
       <div className="flex flex-row justify-evenly gap-4">
         {linkProd !== '#' && (
           <a href={linkProd} target="_blank" rel="noopener noreferrer" className="w-1/2">
-            <button className="flex w-full items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-lg text-black transition-colors duration-200 hover:bg-orange-400 active:bg-orange-600 dark:bg-orange-600 dark:text-white dark:hover:bg-orange-500 dark:active:bg-orange-700">
+            <button className="flex w-full items-center justify-center rounded-lg bg-[#5B92E5] px-6 py-3 text-lg text-black transition-colors duration-200 hover:bg-[#5B92E5] active:bg-[#5B92E5] dark:bg-[#5B92E5] dark:text-white dark:hover:bg-[#5B92E5] dark:active:bg-[#5B92E5]">
               <EarthIcon />
             </button>
           </a>
@@ -56,6 +75,22 @@ const Card: React.FC<CardProps> = ({
           <a href={linkRepo} target="_blank" rel="noopener noreferrer" className="w-1/2">
             <button className="flex w-full items-center justify-center rounded-lg border-2 border-neutral-200 bg-neutral-100 px-6 py-3 text-2xl text-black transition-colors duration-200 hover:bg-neutral-200 active:bg-neutral-300 dark:border-neutral-800 dark:bg-neutral-800 dark:text-white dark:hover:bg-neutral-700 dark:active:bg-neutral-600">
               <FaGithub />
+            </button>
+          </a>
+        )}
+
+        {linkYou !== '#' && (
+          <a href={linkYou} target="_blank" rel="noopener noreferrer" className="w-1/2">
+            <button className="flex w-full items-center justify-center rounded-lg bg-[#FF0000] px-6 py-3 text-2xl text-white transition-colors duration-200 hover:bg-[#FF0000] active:bg-[#FF0000] dark:bg-[#FF0000] dark:text-white dark:hover:bg-[#FF0000] dark:active:bg-[#FF0000]">
+              <FaYoutube />
+            </button>
+          </a>
+        )}
+
+        {linkLink !== '#' && (
+          <a href={linkLink} target="_blank" rel="noopener noreferrer" className="w-1/2">
+            <button className="flex w-full items-center justify-center rounded-lg bg-[#0077B5] px-6 py-3 text-2xl text-white transition-colors duration-200 hover:bg-[#0077B5] active:bg-[#0077B5] dark:bg-[#0077B5] dark:text-white dark:hover:bg-[#0077B5] dark:active:bg-[#0077B5]">
+              <FaLinkedinIn />
             </button>
           </a>
         )}

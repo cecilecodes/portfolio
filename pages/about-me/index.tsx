@@ -5,43 +5,34 @@ export default function AboutMe() {
   return (
     <>
       <CustomHead
-        title="About Me - Thomas Chardonnens"
-        description="Learn more about Thomas Chardonnens"
+        title="About Me - Hyunji Cecile Park"
+        description="Learn more about Hyunji Cecile Park"
       />
       <main className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center bg-white px-4 pb-8 pt-8 font-['JetBrains_Mono'] text-gray-700 dark:bg-neutral-950 dark:text-gray-200">
         <section className="mb-12 space-y-8 text-center text-base leading-relaxed">
           <h2 className="mb-6 text-center font-['Schibsted_Grotesk'] text-2xl font-semibold">
-            A little more about me
+            🎀 Deeper into my life 🎀
           </h2>
 
           <div className="mx-auto max-w-2xl space-y-6">
             <div className="space-y-2">
               <h3 className="font-['Schibsted_Grotesk'] text-lg font-semibold">Personal</h3>
-              <p className="text-base">22 years old, I love running and Korean food 🇰🇷</p>
-              <p className="text-base">Visited Seoul last May. This city is fantastic 😍</p>
-              <p className="text-base">Still wondering what my next trip will be 🤔</p>
+              <p className="text-base">Born in 2002, South Korea.</p>
+              <p className="text-base">Third culture kid who lived in Shanghai, China for 12 years 🇨🇳</p>
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-['Schibsted_Grotesk'] text-lg font-semibold">Books</h3>
-              <p className="text-base">
-                My favorite books are probably The Hobbit, 1984 and Atomic Habits
-              </p>
+              <h3 className="font-['Schibsted_Grotesk'] text-lg font-semibold">Travels</h3>
+              <p className="text-base">Love travelling: went to more than 18 countries and counting 🌍</p>
+              <p className="text-base">visit my photo account that covers my travels: <a href="https://www.instagram.com/cecile.captures/" target="_blank" rel="noopener noreferrer">📸 @cecile.captures</a></p>
+              <p className="text-base">visit my personal Youtube Channel: <a href="https://www.youtube.com/@cecilelog7952" target="_blank" rel="noopener noreferrer">📹 @CecileLog</a></p>
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-['Schibsted_Grotesk'] text-lg font-semibold">Entertainment</h3>
-              <p className="text-base">A big fan of The Office</p>
-              <p className="text-base">
-                Watching some of the most popular KDramas to stay up to date with my friends!
-              </p>
-              <p className="text-base">I really liked The Glory, Doona and King The Land</p>
-            </div>
-
-            <div className="space-y-2">
-              <h3 className="font-['Schibsted_Grotesk'] text-lg font-semibold">Gaming</h3>
-              <p className="text-base">Finished Hades and Cyberpunk 2077 in solo</p>
-              <p className="text-base">Relax by playing Minecraft and Valorant with my friends</p>
+              <h3 className="font-['Schibsted_Grotesk'] text-lg font-semibold">Interests</h3>
+              <p className="text-base">👧🏻 I love kids and I can create good rapport with them. I have experiences teaching and babysitting kids from age 5 to 19.</p>
+              <p className="text-base">👩🏻‍🏫 I love and am pasisonate in teaching. I have more than 5 years of experiences teaching kids from kindergarten to adults. I have taught English, Korean, Math, Science and many more.</p>
+              <p className="text-base">I am interested in making the world a better and equal place for everyone. I strive to end social inequality.</p>
             </div>
           </div>
         </section>

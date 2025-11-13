@@ -6,8 +6,8 @@ interface CustomHeadProps {
 }
 
 export default function CustomHead({
-  title = 'Thomas Chardonnens',
-  description = 'Thomas Chardonnens - Personal Website',
+  title = 'Hyunji Cecile Park',
+  description = 'Hyunji Cecile Park - Personal Website',
 }: CustomHeadProps) {
   return (
     <Head>
@@ -15,8 +15,8 @@ export default function CustomHead({
       <meta name="description" content={description} />
       <link
         rel="icon"
-        href="https://pbs.twimg.com/profile_images/1449466562591723522/3MyO9dFd_400x400.jpg"
-        type="image/jpg"
+        href="/hyunji-pic.jpeg"
+        type="image/jpeg"
       />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -26,7 +26,7 @@ export default function CustomHead({
         property="og:image"
         content="https://pbs.twimg.com/profile_images/1728638195871674368/X979dM1Q_400x400.jpg"
       />
-      <meta property="og:url" content="https://portfolio.thomaschardonnens.com" />
+      <meta property="og:url" content="https://hyunjicecilepark.com" />
       <meta property="og:type" content="website" />
 
       <meta name="twitter:card" content="summary_large_image" />
