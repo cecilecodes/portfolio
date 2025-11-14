@@ -26,7 +26,7 @@ export default function CustomHead({
         property="og:image"
         content="https://pbs.twimg.com/profile_images/1728638195871674368/X979dM1Q_400x400.jpg"
       />
-      <meta property="og:url" content="https://hyunjicecilepark.com" />
+      <meta property="og:url" content="https://hyunjipark.com" />
       <meta property="og:type" content="website" />
 
       <meta name="twitter:card" content="summary_large_image" />

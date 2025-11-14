@@ -5,6 +5,9 @@ import { FaGithub, FaLinkedinIn, FaYoutube } from 'react-icons/fa6';
 import AnimatedElement from '../components/animated-element';
 import Card from '../components/card';
 import CustomHead from '../components/head';
+import GradientText from '../components/gradient-text';
+import StarBorder from '../components/star-border';
+import TextType from '../components/text-type';
 
 export default function Home() {
   return (
@@ -12,7 +15,7 @@ export default function Home() {
       <CustomHead />
       <main className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center bg-neutral-50 px-4 pb-8 pt-8 font-['Roboto'] text-neutral-800 dark:bg-neutral-950 dark:text-neutral-200">
         <div className="w-full">
-          <div className="mb-6 flex flex-row items-center justify-center">
+          <AnimatedElement as="div" delay={0} className="mb-6 flex flex-row items-center justify-center">
             <Image
               src="/hyunji-pic.jpeg"
               alt="Profile Photo"
@@ -20,15 +23,16 @@ export default function Home() {
               height={150}
               className="rounded-full shadow-lg"
             />
-          </div>
+          </AnimatedElement>
           <AnimatedElement
             as="h1"
+            delay={0.1}
             className="font-base mb-6 text-center font-['Merriweather'] text-3xl"
           >
             Hyunji Cecile Park
           </AnimatedElement>
 
-          <div className="mb-8 flex flex-row items-center justify-center space-x-6">
+          <AnimatedElement as="div" delay={0.2} className="mb-8 flex flex-row items-center justify-center space-x-6">
           <a href="https://www.linkedin.com/in/hyunji-park-4811b6219/"
               target="_blank"
               rel="noopener noreferrer"
@@ -60,20 +64,26 @@ export default function Home() {
               </motion.button>
             </a>
             
-          </div>
+          </AnimatedElement>
 
           <section className="mb-12 space-y-8 text-center text-base leading-relaxed">
             <div className="space-y-1">
-              <AnimatedElement as="p" delay={0.3} className="text-base font-['Edu_VIC_WA_NT_Hand']">
+              <AnimatedElement as="p" delay={0} className="text-base font-['Edu_VIC_WA_NT_Hand']">
                 📍 Seoul, South Korea
               </AnimatedElement>
 
-              <AnimatedElement as="p" delay={0.4} className="text-base font-['Edu_VIC_WA_NT_Hand']">
+              <AnimatedElement as="p" delay={0.1} className="text-base font-['Merriweather']">
                 <Link
                   href="/about-me"
                   className="text-neutral-800 hover:text-blue-600 dark:text-neutral-200 dark:hover:text-blue-400"
                 >
-                  👉🏻 More About Me
+                  👉🏻 <TextType 
+                    text="More About Me" 
+                    as="span" 
+                    typingSpeed={100}
+                    loop={false}
+                    showCursor={false}
+                  />
                 </Link>
               </AnimatedElement>
             </div>
@@ -81,12 +91,12 @@ export default function Home() {
             <div className="flex flex-col space-y-8">
               <AnimatedElement
                 as="h3"
-                delay={0.5}
+                delay={0}
                 className="font-['Merriweather'] text-lg font-semibold"
               >
                 Education 📚
               </AnimatedElement>
-              <AnimatedElement as="p" delay={0.6} className="text-base">
+              <AnimatedElement as="p" delay={0.1} className="text-base">
                 M.S. in French Language and Literature, Political Science and Diplomacy, and Education
                 <br />
                 <a
@@ -108,14 +118,14 @@ export default function Home() {
             <div className="flex flex-col space-y-8">
               <AnimatedElement
                 as="h3"
-                delay={0.8}
+                delay={0}
                 className="font-['Merriweather'] text-lg font-semibold"
               >
                 Internships 👩🏻‍💻
               </AnimatedElement>
               <AnimatedElement
                 as="div"
-                delay={0.9}
+                delay={0.1}
                 className="text-base text-neutral-600 dark:text-neutral-400"
               >
                 <a
@@ -155,14 +165,14 @@ export default function Home() {
             <div className="flex flex-col space-y-8">
               <AnimatedElement
                 as="h3"
-                delay={0.8}
+                delay={0}
                 className="font-['Merriweather'] text-lg font-semibold"
               >
                 Business 💼
               </AnimatedElement>
               <AnimatedElement
                 as="div"
-                delay={0.9}
+                delay={0.1}
                 className="text-base text-neutral-600 dark:text-neutral-400"
               >
                 <a
@@ -178,14 +188,14 @@ export default function Home() {
             <div className="flex flex-col space-y-8">
               <AnimatedElement
                 as="h3"
-                delay={1.0}
+                delay={0}
                 className="font-['Merriweather'] text-lg font-semibold"
               >
                 Awards 🏆
               </AnimatedElement>
               <AnimatedElement
                 as="div"
-                delay={1.1}
+                delay={0.1}
                 className="text-base text-neutral-600 dark:text-neutral-400"
               >
                 <span className="text-neutral-800 dark:text-neutral-200">Grand Prize</span> – <a
@@ -195,7 +205,7 @@ export default function Home() {
                   HULT Prize On Campus
                 </a>
                 <br />
-                <span className="text-neutral-800 dark:text-neutral-200">Top 6 Teams</span> – <a
+                <span className="text-neutral-800 dark:text-neutral-200">Top 3</span> – <a
                   href="https://www.hultprize.org/"
                   className="text-neutral-600 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-blue-400"
                 >
@@ -236,24 +246,26 @@ export default function Home() {
               </AnimatedElement>
             </div>
 
-            <AnimatedElement as="p" delay={1.2} className="font-['Roboto_Serif'] mx-auto max-w-2xl text-base italic">
-              Interested in <strong>solving inequality issues</strong> for a sustainable world,
-              <br />
-              especially in <strong style={{ color: '#5b92e5' }}>education, gender, and human rights.</strong>
+            <AnimatedElement as="div" delay={0} className="font-['Roboto_Serif'] mx-auto max-w-2xl text-base italic flex justify-center">
+              <StarBorder as="div" color="#5b92e5" speed="4s" className="text-base">
+                Interested in <GradientText colors={['#5b92e5', '#9c40ff', '#5b92e5']} animationSpeed={6} className="font-bold">solving inequality issues</GradientText> for a sustainable world,
+                <br />
+                especially in <GradientText colors={['#5b92e5', '#9c40ff', '#5b92e5']} animationSpeed={6} className="font-bold">education, gender, and human rights.</GradientText>
+              </StarBorder>
             </AnimatedElement>
           </section>
 
           <section className="mb-12 space-y-6">
             <AnimatedElement
               as="h2"
-              delay={1.3}
+              delay={0}
               className="mb-6 text-center font-['Merriweather'] text-lg font-semibold"
             >
-              My Past-Activities 📝
+              United Nations Activities 🇺🇳
             </AnimatedElement>
             <AnimatedElement
               as="div"
-              delay={1.4}
+              delay={0.1}
               className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
             >
               <Card
@@ -263,6 +275,87 @@ export default function Home() {
                 organization="Korea International Cooperation Agency (KOICA)"
                 position="Cambodia Team 2 Leader"
               ></Card>
+
+              <Card
+                title="21.22 AIESEC in YSU"
+                description="AIESEC is a global youth organization that develops leadership through international exchange and volunteer experiences."
+                linkProd="https://www.aiesecinkorea.org/#home"
+                organization="AIESEC in YSU"
+                position="iGV, TM Member"
+              ></Card>
+
+              <Card
+                title="Yonsei Underwood International Development Academia (UIDA)"
+                description="Collaborated with Green Climate Fund (GCF) & Human Rights Beyond Borders (HRBB). Wrote 2 research papers about Najo tribe & education inequality for persons with disabilities."
+                linkLink="https://www.linkedin.com/company/uidayonsei/posts/?feedView=all&viewAsMember=true"
+                organization="Yonsei University"
+                position="Admin"
+              ></Card>
+
+              <Card
+                title="KOICA WeKO 6"
+                description="Conducted as a global ambassador, created contents and promoted international development (ODA) across borders."
+                linkProd="https://www.koica.go.kr/koica_kr/990/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29pY2Ffa3IlMkYxNTElMkYzODYwNzIlMkZhcnRjbFZpZXcuZG8lM0ZwYWdlJTNEMSUyNnNyY2hDb2x1bW4lM0QlMjZzcmNoV3JkJTNEJTI2YmJzQ2xTZXElM0QlMjZiYnNPcGVuV3JkU2VxJTNEJTI2cmdzQmduZGVTdHIlM0QlMjZyZ3NFbmRkZVN0ciUzRCUyNmlzVmlld01pbmUlM0RmYWxzZSUyNnBhc3N3b3JkJTNEJTI2"
+                organization="Korea International Cooperation Agency (KOICA)"
+              ></Card>
+
+          </AnimatedElement>
+          </section>
+
+          <section className="mb-12 space-y-6">
+            <AnimatedElement
+              as="h2"
+              delay={0}
+              className="mb-6 text-center font-['Merriweather'] text-lg font-semibold"
+            >
+              Conferences 🤝
+            </AnimatedElement>
+            <AnimatedElement
+              as="div"
+              delay={0.1}
+              className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+            >
+
+              <Card
+                title="2025 Seoul World Convention on North Korean Human Rights"
+                description="Organized and chaired the Youth Forum for Shaping the Future section. ROK government, numerous NGOs and organizations participated in the forum."
+                linkProd="http://www.ncnkhr.org/"
+                organization="NGO Council for North Korean Human Rights"
+                position="Main Chair"
+              ></Card>
+
+              <Card
+                title="2023 Global Youth Forum"
+                description="Organized and conducted Forum for international youths to explore sustainable peace beyond war by weaving knowledge and collaboration"
+                linkProd="https://unesco.or.kr/%EC%A7%80%EC%8B%9D%EC%9D%84-%ED%95%A8%EA%BB%98-%EC%97%AE%EC%96%B4-%ED%8F%89%ED%99%94-%EC%9C%84%ED%95%9C-%EB%B3%80%ED%99%94%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%9E%90/"
+                organization="Korean National Commission for UNESCO"
+                position="Intern"
+              ></Card>
+
+              <Card
+                title="2023 Global Youth Summit"
+                description="Organized and translated KR-ENG for international youths who discussed about strengthening the role of youth in building a sustainable future society."
+                linkProd="https://www.mogef.go.kr/nw/enw/nw_enw_s001d.do?mid=mda700&bbtSn=711291"
+                organization="ROK Ministry of Gender Equality and Family"
+                position="Facilitator"
+              ></Card>
+
+          </AnimatedElement>
+          </section>
+
+          <section className="mb-12 space-y-6">
+            <AnimatedElement
+              as="h2"
+              delay={0}
+              className="mb-6 text-center font-['Merriweather'] text-lg font-semibold"
+            >
+              Extra Activities 👩🏻‍💻
+            </AnimatedElement>
+            <AnimatedElement
+              as="div"
+              delay={0.1}
+              className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+            >
 
               <Card
                 title="RESPACK Startup"
@@ -275,16 +368,50 @@ export default function Home() {
                 title="Google Developer Group Yonsei (GDGoC Yonsei)"
                 description="Created projects such as 'Seoul Event Calendar' that provides all events information in a neat manner."
                 linkProd="https://gdgoc.yonsei.ac.kr/en"
-                position="Frontend Developer"
+                position="Front-end Developer"
               ></Card>
 
               <Card
-                title="2023 Global Youth Forum"
-                description="Organized and conducted Forum for international youths to explore sustainable peace beyond war by weaving knowledge and collaboration"
-                linkProd="https://unesco.or.kr/%EC%A7%80%EC%8B%9D%EC%9D%84-%ED%95%A8%EA%BB%98-%EC%97%AE%EC%96%B4-%ED%8F%89%ED%99%94-%EC%9C%84%ED%95%9C-%EB%B3%80%ED%99%94%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%9E%90/"
-                organization="Korean National Commission for UNESCO"
-                position="Intern"
+                title="Universities Allied for Essential Medicines Korea (UAEM Korea)"
+                description="Global student network advocating for equitable access to medicines by changing pharmaceutical innovation practices. Created children's books on essential medicines and distributed them to children institutions. Won Grand Prize at Yonsei Institute for Higher Education Innovation (IHEI)."
+                linkProd="https://www.uaem.org/"
+                award="IHEI Grand Prize"
+                organization="UAEM, Human Asia"
+                position="President"
               ></Card>
+
+              <Card
+                title="2022 World Minister Forum: Airport Protocol"
+                description="Performed as a protocol for 4 country ministers at the Incheon AirportAssisted VIP with their arrival and departure."
+                award="Ministrial Award"
+                organization="World Minister Forum"
+                position="Protocol officer, Translatorr"
+              ></Card>
+
+              <Card
+                title="Yonsei University Student Council"
+                description="Represented Yonsei University French department students and organized various university activities."
+                linkProd="https://franys.yonsei.ac.kr/franys/index.do"
+                organization="Yonsei University French Department"
+                position="President, Vice-President, Public Relations Officer"
+              ></Card>
+
+          </AnimatedElement>
+          </section>
+
+          <section className="mb-12 space-y-6">
+            <AnimatedElement
+              as="h2"
+              delay={0}
+              className="mb-6 text-center font-['Merriweather'] text-lg font-semibold"
+            >
+              Model United Nations 🇺🇳
+            </AnimatedElement>
+            <AnimatedElement
+              as="div"
+              delay={0.1}
+              className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+            >
 
               <Card
                 title="18th Yonsei Delegation of Model United Nations"
@@ -303,21 +430,45 @@ export default function Home() {
                 position="Delegate of Vietnam and China"
               ></Card>
 
-             <Card
-                title="Universities Allied for Essential Medicines Korea (UAEM Korea)"
-                description="Global student network advocating for equitable access to medicines by changing pharmaceutical innovation practices. Created children's books on essential medicines and distributed them to children institutions. Won Grand Prize at Yonsei Institute for Higher Education Innovation (IHEI)."
-                linkProd="https://www.uaem.org/"
-                award="IHEI Grand Prize"
-                organization="UAEM, Human Asia"
-                position="President"
+              <Card
+                title="2022 ICM MUNESCO"
+                description="Filmed and won Grand Prize among 50+ majors in Yonsei University."
+                linkYou="https://www.youtube.com/live/8peEF2SorMc?si=VUB4yTLyztnur5di"
+                organization="UNESCO ICM"
+                position="CIGEPS Chair"
               ></Card>
 
               <Card
-                title="2023 Global Youth Summit"
-                description="Organized and translated KR-ENG for international youths who discussed about strengthening the role of youth in building a sustainable future society."
-                linkProd="https://www.mogef.go.kr/nw/enw/nw_enw_s001d.do?mid=mda700&bbtSn=711291"
-                organization="ROK Ministry of Gender Equality and Family"
-                position="Facilitator"
+                title="AYIMUN 25th, 26th"
+                description="Chaired multiple committees at the international youth MUN conferences."
+                linkProd="https://modelunitednation.org/"
+                organization="AYIMUN"
+                position="ILO Chair, EU Chair, UNESCO Rapporteur"
+              ></Card>
+
+          </AnimatedElement>
+          </section>
+
+          <section className="mb-12 space-y-6">
+            <AnimatedElement
+              as="h2"
+              delay={0}
+              className="mb-6 text-center font-['Merriweather'] text-lg font-semibold"
+            >
+              Videos of My Work 📹
+            </AnimatedElement>
+            <AnimatedElement
+              as="div"
+              delay={0.1}
+              className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+            >
+
+              <Card
+                title="Documentary: Volunteering at Cambodia"
+                description="Filmed a documentary about my volunteering experience in Cambodia."
+                linkYou="https://youtu.be/h6pe0LYEYoE?si=ENnN9zkPBfBE0Ks9&t=543"
+                organization="Korea International Cooperation Agency (KOICA)"
+                position="Cambodia Team 2 Leader"
               ></Card>
 
               <Card
@@ -329,51 +480,18 @@ export default function Home() {
                 award="Grand Prize"
               ></Card>
 
-              <Card
-                title="2022 ICM MUNESCO"
-                description="Filmed and won Grand Prize among 50+ majors in Yonsei University."
-                linkYou="https://www.youtube.com/live/8peEF2SorMc?si=VUB4yTLyztnur5di"
-                organization="UNESCO ICM"
-                position="CIGEPS Chair"
-              ></Card>
 
               <Card
-                title="21.22 AIESEC in YSU"
-                description="AIESEC is a global youth organization that develops leadership through international exchange and volunteer experiences."
-                linkProd="https://www.aiesecinkorea.org/#home"
-                organization="AIESEC in YSU"
-                position="iGV, TM Member"
-              ></Card>
-
-              <Card
-                title="2022 World Minister Forum: Airport Protocol"
-                description="Performed as a protocol for 4 country ministers at the Incheon AirportAssisted VIP with their arrival and departure."
-                award="Ministrial Award"
-                organization="World Minister Forum"
-                position="Protocol officer, Translatorr"
-              ></Card>
-
-              <Card
-                title="KOICA WeKO 6"
-                description="Conducted as a global ambassador, created contents and promoted international development (ODA) across borders."
-                linkProd="https://www.koica.go.kr/koica_kr/990/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29pY2Ffa3IlMkYxNTElMkYzODYwNzIlMkZhcnRjbFZpZXcuZG8lM0ZwYWdlJTNEMSUyNnNyY2hDb2x1bW4lM0QlMjZzcmNoV3JkJTNEJTI2YmJzQ2xTZXElM0QlMjZiYnNPcGVuV3JkU2VxJTNEJTI2cmdzQmduZGVTdHIlM0QlMjZyZ3NFbmRkZVN0ciUzRCUyNmlzVmlld01pbmUlM0RmYWxzZSUyNnBhc3N3b3JkJTNEJTI2"
-                organization="Korea International Cooperation Agency (KOICA)"
-              ></Card>
-
-              <Card
-                title="Yonsei Underwood International Development Academia (UIDA)"
-                description="Collaborated with Green Climate Fund (GCF) & Human Rights Beyond Borders (HRBB). Wrote 2 research papers about Najo tribe & education inequality for persons with disabilities."
-                linkLink="https://www.linkedin.com/company/uidayonsei/posts/?feedView=all&viewAsMember=true"
+                title="Introducing Yonsei University French Department"
+                description="Filmed an official Yonsei University video about Yonsei University French Department."
+                linkYou="https://www.youtube.com/watch?v=TQSAuvQKzoU"
                 organization="Yonsei University"
-                position="Admin"
               ></Card>
 
               <Card
-                title="AYIMUN 25th, 26th"
-                description="Chaired multiple committees at the international youth MUN conferences."
-                linkLink="https://modelunitednation.org/"
-                organization="AYIMUN"
-                position="ILO Chair, EU Chair, UNESCO Rapporteur"
+                title="Internship at Korean National Commission for UNESCO"
+                description="Filmed a Youtube video about my internship at Korean National Commission for UNESCO and how to participate in United Nations activities."
+                linkYou="https://www.youtube.com/watch?v=mpX-E2suByI"
               ></Card>
 
             </AnimatedElement>
