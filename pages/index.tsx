@@ -176,7 +176,7 @@ export default function Home() {
                 className="text-base text-neutral-600 dark:text-neutral-400"
               >
                 <a
-                  href="https://unesco.or.kr/"
+                  href="https://www.ecorespack.com"
                   className="text-neutral-800 hover:text-blue-600 dark:text-neutral-200 dark:hover:text-blue-400"
                 >
                   RESPACK
@@ -362,6 +362,7 @@ export default function Home() {
                 description="Started a startup that sells eco-friendly parcel buffers made from textile wastes."
                 award="Hult Prize On Campus: Grand Prize"
                 position="COO"
+                linkProd="https://www.ecorespack.com"
               ></Card>
 
               <Card
