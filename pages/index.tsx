@@ -432,6 +432,14 @@ export default function Home() {
               ></Card>
 
               <Card
+                title="2022 National MUN: New York"
+                description="Participated in the ECOSOC Committee. Wrote resolutions on: Sustainable Economic Development for Least Developed Countries."
+                linkProd="https://www.nmun.org/conferences/new-york.html"
+                organization="NMUN: New York"
+                position="Delegate of Kenya"
+              ></Card>
+
+              <Card
                 title="2022 ICM MUNESCO"
                 description="Filmed and won Grand Prize among 50+ majors in Yonsei University."
                 linkYou="https://www.youtube.com/live/8peEF2SorMc?si=VUB4yTLyztnur5di"
