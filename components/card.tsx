@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({
     <div className="flex h-auto flex-col gap-4 rounded-2xl border-2 border-neutral-200 p-8 transition-colors duration-200 hover:border-[#5B92E5] dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-[#5B92E5]">
       <div className="h-5/6 space-y-4">
         <div className="flex flex-row">
-          <p className="font-['Schibsted_Grotesk'] text-lg font-semibold">{title}</p>
+          <p className="font-['Merriweather'] text-lg font-semibold">{title}</p>
         </div>
         <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
           {description}

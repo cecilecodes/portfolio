@@ -12,13 +12,13 @@ export default function AboutMe() {
         title="About Me - Hyunji Cecile Park"
         description="Learn more about Hyunji Cecile Park"
       />
-      <main className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center bg-white px-4 pb-8 pt-8 font-['JetBrains_Mono'] text-gray-700 dark:bg-neutral-950 dark:text-gray-200">
+      <main className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center bg-white px-4 pb-8 pt-8 font-['Merriweather'] text-gray-700 dark:bg-neutral-950 dark:text-gray-200">
         <section className="mb-12 space-y-8 text-center text-base leading-relaxed">
           <div className="mb-6">
             <SplitText
-              text="🎀 Deeper into Me! 🎀"
+              text="🎀 About Me! 🎀"
               tag="h2"
-              className="font-['Schibsted_Grotesk'] text-2xl font-semibold"
+              className="font-['Merriweather'] text-2xl font-semibold text-[#FFC1DA]"
               splitType="chars"
               delay={100}
               duration={0.6}
@@ -31,30 +31,33 @@ export default function AboutMe() {
 
           <div className="mx-auto max-w-2xl space-y-6">
             <AnimatedElement as="div" delay={0} className="space-y-2">
-              <h3 className="font-['Schibsted_Grotesk'] text-lg font-semibold">Personal</h3>
-              <p className="text-base">Born in 2002, South Korea 🇰🇷</p>
-              <p className="text-base"><strong>Third culture kid</strong> who lived in <em>Shanghai, China for 12 years</em> 🇨🇳</p>
+              <h3 className="font-['Merriweather'] text-lg font-semibold">Personal</h3>
+              <p className="font-['Roboto'] text-base">Born in 2002, South Korea 🇰🇷</p>
+              <p className="font-['Roboto'] text-base"><strong>Third culture kid</strong> who lived in <em>Shanghai, China for 12 years</em> 🇨🇳</p>
             </AnimatedElement>
 
             <AnimatedElement as="div" delay={0.1} className="space-y-2">
-              <h3 className="font-['Schibsted_Grotesk'] text-lg font-semibold">Travels</h3>
-              <p className="text-base">Love travelling: went to <em>more than 18 countries</em> and counting 🌍</p>
-              <p className="text-base">visit my <em>Photo Account</em> that covers my travels: <a href="https://www.instagram.com/cecile.captures/" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-blue-600 dark:hover:text-blue-400">📸@cecile.captures</a></p>
-              <p className="text-base">visit my <em>personal Youtube Channel</em>: <a href="https://www.youtube.com/@cecilelog7952" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-blue-600 dark:hover:text-blue-400">📹@CecileLog</a></p>
+              <h3 className="font-['Merriweather'] text-lg font-semibold">Travels</h3>
+              <p className="font-['Roboto'] text-base">Love travelling: went to <em>more than 18 countries</em> and counting!! 🌍</p>
+              <p className="font-['Roboto'] text-base">visit my <em>Photo Account</em> that covers my travels: <a href="https://www.instagram.com/cecile.captures/" target="_blank" rel="noopener noreferrer" className="text-[#FFC1DA] hover:text-blue-600 dark:hover:text-blue-400">📸 @cecile.captures</a></p>
+              <p className="font-['Roboto'] text-base">visit my <em>personal Youtube Channel</em>: <a href="https://www.youtube.com/@cecilelog7952" target="_blank" rel="noopener noreferrer" className="text-[#FFC1DA] hover:text-blue-600 dark:hover:text-blue-400">📹 @CecileLog</a></p>
             </AnimatedElement>
 
             <AnimatedElement as="div" delay={0.2} className="space-y-2">
-              <h3 className="font-['Schibsted_Grotesk'] text-lg font-semibold">Interests</h3>
-              <p className="text-base"><strong>I love kids 👧🏻</strong>
+              <h3 className="font-['Merriweather'] text-lg font-semibold">Interests</h3>
+              <p className="font-['Roboto'] text-base"><strong className="text-[#FFC1DA]">I love kids 👧🏻</strong>
                 <br />
-                I can create good rapport with them. I have experiences <em>teaching and babysitting kids </em>from age 5 to 19.</p>
-              <p className="text-base">I am <strong>pasisonate in teaching 👩🏻‍🏫</strong>
+                I can create good rapport with them.
+                <br />
+                I have experiences <em>teaching and babysitting kids </em>from age 5 to 19.</p>
+              <br />
+              <p className="font-['Roboto'] text-base">I am <strong className="text-[#FFC1DA]">pasisonate in teaching 👩🏻‍🏫</strong>
                 <br />
                 I have <em>more than 5 years of experiences</em> teaching kids from kindergarten to adults. 
                 <br /> 
                 I have taught English, Korean, Math, Science etc.</p>
             </AnimatedElement>
-
+<br />
             <AnimatedElement as="div" delay={0} className="font-['Roboto_Serif'] mx-auto max-w-2xl text-base italic flex justify-center">
               <StarBorder as="div" color="#5b92e5" speed="4s" className="text-base">
                 Interested in <GradientText colors={['#5b92e5', '#9c40ff', '#5b92e5']} animationSpeed={6} className="font-bold">solving inequality issues</GradientText> for a sustainable world,
