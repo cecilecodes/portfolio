@@ -24,9 +24,9 @@ export default function CustomHead({
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content="https://pbs.twimg.com/profile_images/1728638195871674368/X979dM1Q_400x400.jpg"
+        content="https://cecilehyunji.com/hyunji-pic.jpeg"
       />
-      <meta property="og:url" content="https://hyunjipark.com" />
+      <meta property="og:url" content="https://cecilehyunji.com" />
       <meta property="og:type" content="website" />
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -34,7 +34,7 @@ export default function CustomHead({
       <meta name="twitter:description" content={description} />
       <meta
         name="twitter:image"
-        content="https://pbs.twimg.com/profile_images/1728638195871674368/X979dM1Q_400x400.jpg"
+        content="https://cecilehyunji.com/hyunji-pic.jpeg"
       />
     </Head>
   );
