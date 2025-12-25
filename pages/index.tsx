@@ -230,6 +230,27 @@ export default function Home() {
                   Human Asia
                 </a>
                 <br />
+                <span className="text-neutral-800 dark:text-neutral-200">Excellence Award : GDGoC Yonsei X Korea Demo Day</span> – <a
+                  href="https://gdgoc.yonsei.ac.kr/en"
+                  className="text-neutral-600 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-blue-400"
+                >
+                  Google Developer Group University
+                </a>
+                <br />
+                <span className="text-neutral-800 dark:text-neutral-200">Grand Prize : French Department Promotion Video</span> – <a
+                  href="https://www.yonsei.ac.kr/sc/index.do"
+                  className="text-neutral-600 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-blue-400"
+                >
+                  Yonsei University
+                </a>
+                <br />
+                <span className="text-neutral-800 dark:text-neutral-200">Grand Prize</span> – <a
+                  href="https://ihei.yonsei.ac.kr/ihei/index.do"
+                  className="text-neutral-600 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-blue-400"
+                >
+                  Yonsei University Institute for Higher Education Innovation (IHEI)
+                </a>
+                <br />
                 <span className="text-neutral-800 dark:text-neutral-200">Grand Prize : French Department Promotion Video</span> – <a
                   href="https://www.yonsei.ac.kr/sc/index.do"
                   className="text-neutral-600 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-blue-400"
