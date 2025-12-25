@@ -205,7 +205,7 @@ export default function Home() {
                   HULT Prize On Campus
                 </a>
                 <br />
-                <span className="text-neutral-800 dark:text-neutral-200">Top 3</span> – <a
+                <span className="text-neutral-800 dark:text-neutral-200">National Top 3</span> – <a
                   href="https://www.hultprize.org/"
                   className="text-neutral-600 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-blue-400"
                 >
